@@ -1,0 +1,70 @@
+cross_validation:
+  block_size_km: 100
+  n_folds: 5
+  strategy: spatial_block
+data:
+  feature_cols:
+  - pH_CaCl2
+  - pH_H2O
+  - EC
+  - CaCO3
+  - P
+  - N
+  - K
+  - Elev
+  - survey_sin
+  - survey_cos
+  - NDVI
+  - NDWI
+  - BSI
+  - B4
+  - B8
+  - B11
+  - B12
+  - MAT
+  - MAP
+  graph_path: data/graphs/lucas_knn.pt
+  log_transform: true
+  lucas_path: data/raw/LUCAS-SOIL-2018.xls
+  processed_path: data/processed/lucas_sentinel_chelsa.csv
+  splits_path: data/splits/
+  target_col: OC
+device: cpu
+evaluation:
+  metrics:
+  - rmse
+  - mae
+  - r2
+  - nll
+  - crps
+  - ece
+  - coverage_90
+graph:
+  edge_features:
+  - dist_km
+  - delta_elev
+  - cos_angle
+  - sin_angle
+  k_neighbors: 16
+  max_dist_km: 200
+model:
+  expert_dropout: 0.1
+  expert_hidden_dim: 64
+  expert_layers: 3
+  gnn_dropout: 0.1
+  gnn_hidden_dim: 128
+  gnn_layers: 2
+  num_experts: 8
+  routing: sparsemax
+  shared_trunk: false
+seed: 42
+training:
+  batch_size: 512
+  epochs: 500
+  lambda_bal: 0.1
+  lambda_spa: 0.002
+  learning_rate: 0.001
+  patience: 40
+  scheduler: cosine
+  warmup_epochs: 10
+  weight_decay: 0.0001

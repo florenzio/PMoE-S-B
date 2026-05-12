@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Data (too large -- use Zenodo for weights, ESDAC for LUCAS)
+data/raw/
+data/processed/
+data/figures/
+*.pt
+*.pth
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
