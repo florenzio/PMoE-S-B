@@ -6,7 +6,7 @@
 Keywords: Mixture-of-experts (MoE), Spatial non-stationarity, Uncertainty quantification(UQ), Gaussian markov random field (GMRF), SOC mapping.
 
 This repository contains the code for PMoE-S-B as described in:
-https://arxiv.org/abs/2405.18953 
+xxxxxxx 
 
 ## Project Structure
 
@@ -44,7 +44,7 @@ For PyTorch Geometric, please follow the specific installation instructions for 
 
 1. Request access to the LUCAS TOPSOIL dataset via the European Soil Data Centre (ESDAC) at https://esdac.jrc.ec.europa.eu/
 2. Place the downloaded file at `data/raw/LUCAS_TOPSOIL_v2.csv`
-3. Extract Sentinel-2 features using Google Earth Engine (see `notebooks/01_eda.ipynb`)
+3. Extract Sentinel-2 features using Google Earth Engine 
 
 ## Quick Start
 
@@ -73,6 +73,6 @@ python experiments/spatial_cv_bayesian.py experiments/config.yaml
       eprint={},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/},
+      url={xxxxxxx},
 }
 ```
